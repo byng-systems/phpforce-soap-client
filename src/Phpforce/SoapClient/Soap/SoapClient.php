@@ -2,19 +2,49 @@
 
 namespace Phpforce\SoapClient\Soap;
 
+use SoapClient as BaseSoapClient;
+use Phpforce\SoapClient\Soap\TypeResolver\SoapTypeResolver;
+
 /**
  * SOAP client used for the Salesforce API client
  *
  */
-class SoapClient extends \SoapClient
+class SoapClient extends BaseSoapClient
 {
+    
+    /**
+     *
+     * @var \Phpforce\SoapClient\Soap\TypeResolver\SoapTypeResolver 
+     */
+    protected $typeResolver;
+    
     /**
      * SOAP types derived from WSDL
      *
      * @var array
      */
     protected $types;
-
+    
+    
+    
+    public function __construct(
+        $wsdl,
+        $options = array(),
+        SoapTypeResolver $typeResolver = null
+    ) {
+        parent::SoapClient($wsdl, $options);
+        
+        if ($typeResolver !== null) {
+            $typeResolver->setWsdlPath($wsdl);
+        } else {
+            $typeResolver = new SoapTypeResolver($wsdl);
+        }
+        
+        $this->typeResolver = $typeResolver;
+        
+        $this->getSoapTypes();
+    }
+    
     /**
      * Retrieve SOAP types from the WSDL and parse them
      *
@@ -23,30 +53,12 @@ class SoapClient extends \SoapClient
     public function getSoapTypes()
     {
         if (null === $this->types) {
-
-            $soapTypes = $this->__getTypes();
-            foreach ($soapTypes as $soapType) {
-                $properties = array();
-                $lines = explode("\n", $soapType);
-                if (!preg_match('/struct (.*) {/', $lines[0], $matches)) {
-                    continue;
-                }
-                $typeName = $matches[1];
-
-                foreach (array_slice($lines, 1) as $line) {
-                    if ($line == '}') {
-                        continue;
-                    }
-                    preg_match('/\s* (.*) (.*);/', $line, $matches);
-                    $properties[$matches[2]] = $matches[1];
-                }
-                $this->types[$typeName] = $properties;
-            }
+            $this->types = $this->typeResolver->resolveTypesForSoapClient($this);
         }
 
         return $this->types;
     }
-
+    
     /**
      * Get a SOAP type’s elements
      *
