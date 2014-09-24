@@ -7,13 +7,13 @@ namespace Phpforce\SoapClient\Result;
  */
 class LoginResult
 {
-    protected $metadataServerUrl;
-    protected $passwordExpired;
-    protected $sandbox;
-    protected $serverUrl;
-    protected $sessionId;
-    protected $userId;
-    protected $userInfo;
+    public $metadataServerUrl;
+    public $passwordExpired;
+    public $sandbox;
+    public $serverUrl;
+    public $sessionId;
+    public $userId;
+    public $userInfo;
 
     /**
      * @return string

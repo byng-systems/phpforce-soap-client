@@ -12,7 +12,7 @@ class UpsertResult extends SaveResult
     /**
      * @var boolean
      */
-    protected $created;
+    public $created;
 
     public function isCreated()
     {

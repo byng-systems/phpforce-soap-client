@@ -19,22 +19,22 @@ class SaveResult
      *
      * @var string
      */
-    protected $id;
+    public $id;
 
     /**
      * @var boolean
      */
-    protected $success;
+    public $success;
 
     /**
      * @var array
      */
-    protected $errors;
+    public $errors;
 
     /**
      * @var mixed
      */
-    protected $param;
+    public $param;
 
     /**
      * @return string

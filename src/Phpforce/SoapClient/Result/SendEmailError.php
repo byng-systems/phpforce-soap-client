@@ -4,7 +4,7 @@ namespace Phpforce\SoapClient\Result;
 
 class SendEmailError extends Error
 {
-    protected $targetObjectId;
+    public $targetObjectId;
 
     public function getTargetObjectId()
     {

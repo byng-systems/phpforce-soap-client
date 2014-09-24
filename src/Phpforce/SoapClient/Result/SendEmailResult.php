@@ -5,11 +5,11 @@ namespace Phpforce\SoapClient\Result;
 /**
  * Send email result
  */
-class SendEmailResult 
+class SendEmailResult
 {
-    protected $errors;
-    protected $success;
-    protected $param;
+    public $errors;
+    public $success;
+    public $param;
 
     public function getErrors()
     {

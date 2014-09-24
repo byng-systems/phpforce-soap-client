@@ -4,11 +4,11 @@ namespace Phpforce\SoapClient\Result;
 
 class ChildRelationship
 {
-    protected $cascadeDelete;
-    protected $childSObject;
-    protected $deprecatedAndHidden;
-    protected $field;
-    protected $relationshipName;
+    public $cascadeDelete;
+    public $childSObject;
+    public $deprecatedAndHidden;
+    public $field;
+    public $relationshipName;
 
     public function isCascadeDelete()
     {

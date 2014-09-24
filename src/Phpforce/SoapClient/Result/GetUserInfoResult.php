@@ -7,49 +7,49 @@ namespace Phpforce\SoapClient\Result;
  */
 class GetUserInfoResult
 {
-    protected $accessibilityMode;
+    public $accessibilityMode;
 
-    protected $currencySymbol;
+    public $currencySymbol;
 
-    protected $orgAttachmentFileSizeLimit;
+    public $orgAttachmentFileSizeLimit;
 
-    protected $orgDisallowHtmlAttachments;
+    public $orgDisallowHtmlAttachments;
 
-    protected $orgHasPersonAccounts;
+    public $orgHasPersonAccounts;
 
-    protected $organizationId;
+    public $organizationId;
 
-    protected $organizationMultiCurrency;
+    public $organizationMultiCurrency;
 
-    protected $organizationName;
+    public $organizationName;
 
-    protected $profileId;
+    public $profileId;
 
-    protected $roleId;
+    public $roleId;
 
-    protected $sessionSecondsValid;
+    public $sessionSecondsValid;
 
-    protected $userDefaultCurrencyIsoCode;
+    public $userDefaultCurrencyIsoCode;
 
-    protected $userEmail;
+    public $userEmail;
 
-    protected $userFullName;
+    public $userFullName;
 
-    protected $userId;
+    public $userId;
 
-    protected $userLanguage;
+    public $userLanguage;
 
-    protected $userLocale;
+    public $userLocale;
 
-    protected $userName;
+    public $userName;
 
-    protected $userTimeZone;
+    public $userTimeZone;
 
-    protected $userType;
+    public $userType;
 
-    protected $userUiSkin;
+    public $userUiSkin;
 
-    protected $orgDefaultCurrencyIsoCode;
+    public $orgDefaultCurrencyIsoCode;
 
     /**
      * @return boolean

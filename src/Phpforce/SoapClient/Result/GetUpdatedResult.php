@@ -4,9 +4,9 @@ namespace Phpforce\SoapClient\Result;
 
 class GetUpdatedResult
 {
-    protected $ids = array();
+    public $ids = array();
 
-    protected $latestDateCovered;
+    public $latestDateCovered;
 
     /**
      * @return array

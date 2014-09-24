@@ -7,28 +7,28 @@ use Phpforce\SoapClient\Result\DescribeSObjectResult\Field;
 
 class DescribeSObjectResult
 {
-    protected $activateable;
-    protected $childRelationships;
-    protected $createable;
-    protected $custom;
-    protected $customSetting;
-    protected $deletable;
-    protected $deprecatedAndHidden;
-    protected $feedEnabled;
-    protected $fields;
-    protected $keyPrefix;
-    protected $label;
-    protected $labelPlural;
-    protected $layoutable;
-    protected $mergeable;
-    protected $name;
-    protected $queryable;
-    protected $replicateable;
-    protected $retrieveable;
-    protected $searchable;
-    protected $triggerable;
-    protected $undeletable;
-    protected $updateable;
+    public $activateable;
+    public $childRelationships;
+    public $createable;
+    public $custom;
+    public $customSetting;
+    public $deletable;
+    public $deprecatedAndHidden;
+    public $feedEnabled;
+    public $fields;
+    public $keyPrefix;
+    public $label;
+    public $labelPlural;
+    public $layoutable;
+    public $mergeable;
+    public $name;
+    public $queryable;
+    public $replicateable;
+    public $retrieveable;
+    public $searchable;
+    public $triggerable;
+    public $undeletable;
+    public $updateable;
 
     /**
      * @return boolean

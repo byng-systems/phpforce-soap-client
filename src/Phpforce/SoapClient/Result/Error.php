@@ -7,9 +7,9 @@ namespace Phpforce\SoapClient\Result;
  */
 class Error
 {
-    protected $fields;
-    protected $message;
-    protected $statusCode;
+    public $fields;
+    public $message;
+    public $statusCode;
 
     /**
      * @return array

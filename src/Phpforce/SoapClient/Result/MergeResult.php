@@ -11,22 +11,22 @@ class MergeResult
     /**
      * @var string
      */
-    protected $id;
+    public $id;
 
     /**
      * @var boolean
      */
-    protected $success;
+    public $success;
 
     /**
      * @var array
      */
-    protected $errors;
+    public $errors;
 
     /**
      * @var array
      */
-    protected $mergedRecordIds;
+    public $mergedRecordIds;
 
     /**
      * @return string

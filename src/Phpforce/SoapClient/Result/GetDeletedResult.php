@@ -4,11 +4,11 @@ namespace Phpforce\SoapClient\Result;
 
 class GetDeletedResult
 {
-    protected $earliestDateAvailable;
+    public $earliestDateAvailable;
 
-    protected $latestDateCovered;
+    public $latestDateCovered;
 
-    protected $deletedRecords;
+    public $deletedRecords;
 
     /**
      * @return \DateTime

@@ -7,10 +7,10 @@ namespace Phpforce\SoapClient\Result;
  */
 class QueryResult
 {
-    protected $done;
-    protected $queryLocator;
-    protected $records = array();
-    protected $size;
+    public $done;
+    public $queryLocator;
+    public $records = array();
+    public $size;
 
     /**
      * @return boolean

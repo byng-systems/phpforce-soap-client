@@ -4,7 +4,7 @@ namespace Phpforce\SoapClient\Result;
 
 class GetServerTimestampResult
 {
-    protected $timestamp;
+    public $timestamp;
 
     /**
      * @return \DateTime

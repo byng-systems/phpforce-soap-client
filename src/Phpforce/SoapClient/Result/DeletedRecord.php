@@ -10,12 +10,12 @@ class DeletedRecord
     /**
      * @var \DateTime
      */
-    protected $deletedDate;
+    public $deletedDate;
 
     /**
      * @var string
      */
-    protected $id;
+    public $id;
 
     /**
      * Get deletion date

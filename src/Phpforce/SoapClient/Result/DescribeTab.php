@@ -4,17 +4,17 @@ namespace Phpforce\SoapClient\Result;
 
 class DescribeTab
 {
-    protected $custom;
+    public $custom;
 
-    protected $iconUrl;
+    public $iconUrl;
 
-    protected $label;
+    public $label;
 
-    protected $miniIconUrl;
+    public $miniIconUrl;
 
-    protected $sobjectName;
+    public $sobjectName;
 
-    protected $url;
+    public $url;
 
     public function getCustom()
     {
